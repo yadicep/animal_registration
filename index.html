@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANIMALES SALVAJES</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="shortcut icon" type="image/png" href="assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4c455109a1.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="container">
+
+      <div class="row">
+        <!-- Tabla para mostrar animales agregados -->
+        <div class="col-12 card col-sm-7 text-center p-4 bg-warning shadow-lg" id="Tabla">
+        <h3>Animales en investigación</h3>
+        <hr class="my-0 bg-dark w-75 mx-auto"/>
+        <div id="Animales" class="my-3 p-3 d-flex align-items-start justify-content-start flex-wrap bg-dark"></div>
+      </div>
+
+      <div class="card col-12 col-sm-4 bg-warning text-dark offset-1 shadow-lg">
+        <!-- Formulario para agregar animales -->
+        <div class="card-body" id="animalForm">
+          <h5 class="card-title">Registrar animal en:</h5>
+          <h6 class="card-subtitle mb-2 text-muted"> Ingrese los datos del animal</h6><hr/>
+          <div class="card-text my-3"> 
+            <!-- Seleccionar el tipo de animal -->
+            <div class="form-group">
+              <label for="exampleInputPassword1">Nombre del animal:</label>
+              <select class="form-control bg-dark text-white" id="animal">
+                <option disabled selected>Seleccione un animal</option>
+                <option value="Leon">León</option>
+                <option value="Lobo">Lobo</option>
+                <option value="Oso">Oso</option>
+                <option value="Serpiente">Serpiente</option>
+                <option value="Aguila">Águila</option>
+              </select>
+            </div>
+            <!-- Seleccionar la edad del animal -->
+            <div class="form-group">
+              <label for="exampleInputPassword1">Años de edad estimados:</label>
+              <select class="form-control bg-dark text-white" id="edad">
+                <option disabled selected>Seleccione un rango de años</option>
+                <option value="0 - 1 años">0 - 1 años</option>
+                <option value="1 - 3 años">1 - 3 años</option>
+                <option value="3 - 5 años">3 - 5 años</option>
+                <option value="5 - 8 años">5 - 8 años</option>
+                <option value="8 - 10 años">8 - 10 años</option>
+                <option value="Más de 10 años">Más de 10 años</option>
+              </select>
+            </div>
+            <!-- Introducir los comentarios para el animal seleccionado -->
+            <div class="form-group">
+              <label for="exampleInputPassword1">Comentarios:</label>
+              <textarea rows="5" class="form-control shadow-lg bg-dark text-white" id="comentarios"></textarea>
+            </div>
+            <!-- Aquí se muestra la foto del animal selccionado -->
+            <div class="p-5 card bg-dark">
+              <div id="preview"></div>
+            </div>
+          </div>
+          <div class="d-grid">
+            <button class="btn btn-light d-block"id="btnRegistrar">Agregar</button>
+          </div>
+        </div>
+      </div>
+      <audio id="player" class="d-none"></audio> 
+
+      <!-- Modal para mostrar los detalles del animal -->
+      <div id="animalModal" class="modal h-auto" style="display: none;">
+        <div class="modal-content modal-dialog modal-dialog-centered w-25 bg-dark bg-gradient text-white h-auto" role="document"><br>
+            <img id="modal-image"><br>
+            <p id="modal-age" class="text-center"></p>
+            <p id="modal-comments" class="text-center"></p>
+            <p class="close-button" type="button">x</p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>
