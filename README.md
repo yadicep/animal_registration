@@ -1,4 +1,4 @@
-# **COMMENTS REGISTRATION ABOUT ANIMALS**
+# **COMMENTS REGISTRATION ABOUT ANIMALS [![Follow on GitHub](https://img.shields.io/github/followers/YADICEP?label=Follow&style=social)](https://github.com/YADICEP)**
 
 ## Description
 This web application allows adding animals under research to a table, using the OOP paradigm to create instances representing different animals with their attributes and methods.
